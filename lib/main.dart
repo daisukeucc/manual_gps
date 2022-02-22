@@ -9,6 +9,8 @@ import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:google_directions_api/google_directions_api.dart';
 import 'package:geocoding/geocoding.dart';
 
+import 'auth/secrets.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -183,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _setDirection(List<LatLng> points) {
 
-    DirectionsService.init('AIzaSyD1aGwZKW5Or-k24idzVUlj3UdHhYT9P1Q');
+    DirectionsService.init(google_map_api_key);
 
     final directinosService = DirectionsService();
 
